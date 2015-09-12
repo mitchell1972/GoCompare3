@@ -73,7 +73,7 @@ public class GoCompareStepDef {
 	String dbName = "JavaDatabase";
 	boolean integratedSecurity = true;
 	static Logger logger;
-	
+	static String change;
    
 	//GoCompareStepDef motorbike_Page;
 	static String dataFile = "H:\\GoCompareDataSheet.xlsx"; 
