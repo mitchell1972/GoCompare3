@@ -22,9 +22,6 @@ import org.openqa.selenium.interactions.Actions;
 
 
 
-
-
-
 import java.io.*;
 
 //import java.util.*;
@@ -98,12 +95,7 @@ public class GoCompareStepDef {
 		driver.manage().window().maximize();
 		logger = Logger.getLogger(Test.class.getName());
 		logger.info(System.getProperty("java.library.path"));
-		try {
-			Thread.sleep(9000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		
 		//motorbike_Page = new GoCompareStepDef();
 	}
@@ -230,7 +222,6 @@ public class GoCompareStepDef {
 		try
 		{
 		System.out.println("Print Given");
-		Thread.sleep(10000);
     	Insurance_elements = driver.findElement(By.className("menu_1"));
 		Actions action = new Actions(driver);
 		action.moveToElement(Insurance_elements).build().perform();
@@ -253,8 +244,8 @@ public class GoCompareStepDef {
 	
 
 	@When("^I click on Car Insurance$")
-	public void i_click_on_Car_Insurance() throws InterruptedException {
-		Thread.sleep(10000);
+	public void i_click_on_Car_Insurance() {
+		
 		driver.findElement(By.xpath("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a")).click();  
 		this.readOracleDB();
 	}
@@ -280,8 +271,7 @@ public class GoCompareStepDef {
 	
 	
 	@When("^I click on Motorbike Insurance$")
-	public void i_click_on_Motorbike_Insurance() throws InterruptedException {
-		Thread.sleep(10000);
+	public void i_click_on_Motorbike_Insurance() {
 		Motorbike_Insurance_element.click();
 	    // Write code here that turns the phrase above into concrete actions
 	    
