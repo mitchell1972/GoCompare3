@@ -77,7 +77,7 @@ public class GoCompareStepDef {
 	static String change2;
 	static String change3;
 	static String change4;
-   
+	static String change5;
 	//GoCompareStepDef motorbike_Page;
 	static String dataFile = "H:\\GoCompareDataSheet.xlsx"; 
 	@Before
