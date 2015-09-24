@@ -235,7 +235,6 @@ public class GoCompareStepDef {
 		Thread.sleep(5000);
     	Insurance_elements = driver.findElement(By.className("menu_1"));
 		Actions action = new Actions(driver);
-		Thread.sleep(5000);
 		action.moveToElement(Insurance_elements).build().perform();
 		}
 		catch(Exception e){}
