@@ -14,7 +14,11 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Mitchell/Downloads/selenium-server-2.35.0/selenium-2.35.0/selenium-server-2.35.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Mitchell/Downloads/oracle-database-1.7.2-sources.jar/oracle-database-1.7.2-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Mitchell/Downloads/jdbc-oracle.jar/jdbc-oracle.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mitchell/Downloads/jdbc-oracle.jar/jdbc-oracle.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Program Files/Java"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Mitchell/Downloads/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Mitchell/Downloads/selenium-server-2.35.0/selenium-2.35.0/selenium-server-standalone-2.35.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Mitchell/Downloads/sqljdbc_4.0/enu/sqljdbc4.jar">

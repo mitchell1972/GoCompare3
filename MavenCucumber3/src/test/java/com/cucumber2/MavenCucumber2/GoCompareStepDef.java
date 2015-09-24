@@ -151,7 +151,7 @@ public class GoCompareStepDef {
 		this.testResult = result;
 	}
 	
-	
+	/*
 	public void ReadDatabase(){
 		
 		try {
@@ -181,7 +181,8 @@ public class GoCompareStepDef {
 		}
 		
 	}
-	
+	*/
+	/*
 	public void readOracleDB(){
 		String oracle_url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String user_name = "system";
@@ -216,6 +217,7 @@ public class GoCompareStepDef {
 		}
 		
 	}
+	*/
 	
 	@After
 	//@org.junit.After 
@@ -248,7 +250,7 @@ public class GoCompareStepDef {
 	  
 	    Assert.assertTrue(Insurance_elements.isDisplayed());
 	    Assert.assertTrue(Motorbike_Insurance_element.isDisplayed());
-	    this.ReadDatabase();
+	    //this.ReadDatabase();
 	}
 	
 
@@ -256,7 +258,7 @@ public class GoCompareStepDef {
 	public void i_click_on_Car_Insurance() throws InterruptedException {
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a")).click();  
-		this.readOracleDB();
+		//this.readOracleDB();
 	}
 
 	@Then("^the Car insurance page is displayed$")
