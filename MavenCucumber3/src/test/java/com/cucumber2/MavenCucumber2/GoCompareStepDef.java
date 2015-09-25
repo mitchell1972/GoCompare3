@@ -232,7 +232,7 @@ public class GoCompareStepDef {
 		try
 		{
 		System.out.println("Print Given");
-		Thread.sleep(5000);
+		Thread.sleep(10000);
     	Insurance_elements = driver.findElement(By.className("menu_1"));
 		Actions action = new Actions(driver);
 		action.moveToElement(Insurance_elements).build().perform();
