@@ -1,6 +1,6 @@
 package com.cucumber2.MavenCucumber2;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 
 public class GoCompare_Insurance {
 	
