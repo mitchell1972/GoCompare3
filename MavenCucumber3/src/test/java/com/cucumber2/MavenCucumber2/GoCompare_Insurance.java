@@ -11,7 +11,14 @@ public class GoCompare_Insurance {
 	
 	
 	 public static WebElement Select_Insurance_Type(String Insurance_Type){
-		element = e.findElement(By.xpath(Insurance_Type));
+		 try {
+			Thread.sleep(5000);
+			element = e.findElement(By.xpath(Insurance_Type));
+		} catch (InterruptedException e1) {
+			
+			e1.printStackTrace();
+		}
+		
 		 return element;
 	 }
 
