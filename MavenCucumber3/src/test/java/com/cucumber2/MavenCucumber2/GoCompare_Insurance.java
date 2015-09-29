@@ -4,11 +4,11 @@ import org.openqa.selenium.*;
 
 public class GoCompare_Insurance {
 	
-	static WebDriver e;
+	WebDriver e;
 	String text;
 	
 	
-	 public static void Select_Insurance_Type(String Insurance_Type){
+	 public void Select_Insurance_Type(String Insurance_Type){
 		 try {
 			Thread.sleep(5000);
 			e.findElement(By.xpath(Insurance_Type)).click();

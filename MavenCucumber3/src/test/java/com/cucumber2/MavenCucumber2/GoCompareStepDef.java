@@ -256,9 +256,10 @@ public class GoCompareStepDef {
 
 	@When("^I click on Car Insurance$")
 	public void i_click_on_Car_Insurance() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(3000);
 		
-		GoCompare_Insurance.Select_Insurance_Type("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a");
+		GoCompare_Insurance gci = new GoCompare_Insurance();
+		gci.Select_Insurance_Type("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a");
 		
 		//driver.findElement(By.xpath("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a")).click();  
 		//this.readOracleDB();
