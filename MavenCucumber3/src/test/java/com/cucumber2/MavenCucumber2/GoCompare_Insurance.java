@@ -6,7 +6,7 @@ public class GoCompare_Insurance {
 	
 	WebDriver e;
 	String text;
-	
+	String test;
 	
 	 public void Select_Insurance_Type(String Insurance_Type){
 		 try {
