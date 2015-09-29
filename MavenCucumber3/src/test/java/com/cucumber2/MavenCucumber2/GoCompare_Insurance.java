@@ -12,7 +12,7 @@ public class GoCompare_Insurance {
 		 try {
 			Thread.sleep(5000);
 			e.findElement(By.xpath(Insurance_Type)).click();
-		} catch (InterruptedException e1) {
+		} catch (Exception e1) {
 			
 			e1.printStackTrace();
 		}
