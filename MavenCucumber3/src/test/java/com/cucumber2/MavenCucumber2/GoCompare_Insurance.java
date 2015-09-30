@@ -5,20 +5,21 @@ import org.openqa.selenium.*;
 public class GoCompare_Insurance {
 	
 	static WebDriver e;
-	WebElement ex;
+	static WebElement ex;
 	String test;
 	
 	 public void Select_Insurance_Type(String Insurance_Type){
 		 try {
 			//if(Insurance_Type.contains(label)){
 				
-			e.findElement(By.xpath(Insurance_Type)).click();
+			ex = e.findElement(By.xpath(Insurance_Type));
+			ex.click();
 			
 			
 			//}
 			//else 
-				//System.out.println("Can't find element on page");
-			System.out.println(ex.getText());
+				System.out.println("Element is: " + ex.getText());
+			
 		} catch (Exception e1) {
 			
 			e1.printStackTrace();
