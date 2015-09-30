@@ -36,7 +36,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.sql.*;
+//import java.sql.*;
 import java.util.logging.Logger;
 
 import junit.framework.Test;
@@ -259,7 +259,10 @@ public class GoCompareStepDef {
 		Thread.sleep(3000);
 		
 		GoCompare_Insurance gci = new GoCompare_Insurance();
-		gci.Select_Insurance_Type("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a");
+		String xpath = "//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a";
+		String label = "Car insurane";
+		
+		gci.Select_Insurance_Type(xpath,label);
 		
 		//driver.findElement(By.xpath("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a")).click();  
 		//this.readOracleDB();
