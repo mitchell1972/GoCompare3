@@ -262,7 +262,7 @@ public class GoCompareStepDef {
 		String xpath = "//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a";
 		String label = "Car insurance";
 		
-		gci.Select_Insurance_Type(xpath,label);
+		gci.Select_Insurance_Type(xpath);
 		
 		//driver.findElement(By.xpath("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a")).click();  
 		//this.readOracleDB();
