@@ -10,10 +10,11 @@ public class GoCompare_Insurance {
 	
 	 public void Select_Insurance_Type(String Insurance_Type, String label){
 		 try {
-			Thread.sleep(20000);
+			
 		
 			
 			if(Insurance_Type.contains(label)){
+				Thread.sleep(30000);
 			e.findElement(By.xpath(Insurance_Type)).click();
 			}
 			else 
