@@ -260,7 +260,7 @@ public class GoCompareStepDef {
 		
 		GoCompare_Insurance gci = new GoCompare_Insurance();
 		String xpath = "//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a";
-		String label = "Car insurane";
+		String label = "Car insurance";
 		
 		gci.Select_Insurance_Type(xpath,label);
 		
