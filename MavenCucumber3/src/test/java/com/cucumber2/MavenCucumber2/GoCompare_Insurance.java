@@ -10,15 +10,10 @@ public class GoCompare_Insurance {
 	
 	 public void Select_Insurance_Type(String Insurance_Type){
 		 try {
-			//if(Insurance_Type.contains(label)){
-				
+			 
 			ex = e.findElement(By.xpath(Insurance_Type));
+			System.out.println("Element is: " + ex.getText());
 			ex.click();
-			
-			
-			//}
-			//else 
-				System.out.println("Element is: " + ex.getText());
 			
 		} catch (Exception e1) {
 			
