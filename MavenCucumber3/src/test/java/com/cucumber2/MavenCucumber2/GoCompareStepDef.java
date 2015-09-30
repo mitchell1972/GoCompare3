@@ -256,7 +256,7 @@ public class GoCompareStepDef {
 
 	@When("^I click on Car Insurance$")
 	public void i_click_on_Car_Insurance() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		
 		GoCompare_Insurance gci = new GoCompare_Insurance();
 		String xpath = "//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a";

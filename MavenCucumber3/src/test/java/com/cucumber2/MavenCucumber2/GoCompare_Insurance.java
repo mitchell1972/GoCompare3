@@ -5,12 +5,14 @@ import org.openqa.selenium.*;
 public class GoCompare_Insurance {
 	
 	WebDriver e;
-	
+	WebElement ex;
 	String test;
 	
 	 public void Select_Insurance_Type(String Insurance_Type, String label){
 		 try {
-			Thread.sleep(5000);
+			Thread.sleep(10000);
+		
+			
 			if(Insurance_Type.contains(label)){
 			e.findElement(By.xpath(Insurance_Type)).click();
 			}
