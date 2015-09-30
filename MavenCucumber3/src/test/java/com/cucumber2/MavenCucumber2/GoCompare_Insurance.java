@@ -14,6 +14,8 @@ public class GoCompare_Insurance {
 			if(Insurance_Type.contains(label)){
 			e.findElement(By.xpath(Insurance_Type)).click();
 			}
+			else 
+				System.out.println("Can't find element on page");
 		} catch (Exception e1) {
 			
 			e1.printStackTrace();
