@@ -10,7 +10,7 @@ public class GoCompare_Insurance {
 	
 	 public void Select_Insurance_Type(String Insurance_Type, String label){
 		 try {
-			Thread.sleep(10000);
+			Thread.sleep(20000);
 		
 			
 			if(Insurance_Type.contains(label)){
