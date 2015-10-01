@@ -6,12 +6,12 @@ public class GoCompare_Insurance {
 	
 	static WebDriver e;
 	static WebElement ex;
-	String test;
+	static String test;
 	
 	 public static void Select_Insurance_Type(String Insurance_Type){
 		 try {
-			 
-			ex = e.findElement(By.xpath(Insurance_Type));
+			 test = Insurance_Type;
+			ex = e.findElement(By.xpath(test));
 			System.out.println("Element is: " + ex.getText());
 			ex.click();
 			
