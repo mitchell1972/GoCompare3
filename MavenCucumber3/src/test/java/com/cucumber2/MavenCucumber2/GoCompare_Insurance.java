@@ -8,7 +8,7 @@ public class GoCompare_Insurance {
 	static WebElement ex;
 	String test;
 	
-	 public void Select_Insurance_Type(String Insurance_Type){
+	 public static void Select_Insurance_Type(String Insurance_Type){
 		 try {
 			 
 			ex = e.findElement(By.xpath(Insurance_Type));
