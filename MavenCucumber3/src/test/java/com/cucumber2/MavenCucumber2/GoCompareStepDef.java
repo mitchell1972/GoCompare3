@@ -52,6 +52,7 @@ public class GoCompareStepDef {
 	static WebElement Insurance_elements;
 	static WebElement Motorbike_Insurance_element;
 	static WebElement Car_Insurance_Page;
+	static WebElement Car_Insurance;
 	static WebElement Motorbike_Insurance_Page;
 	static WebElement getQuotesButton;
 	static WebElement firstNameField;
@@ -258,11 +259,9 @@ public class GoCompareStepDef {
 	public void i_click_on_Car_Insurance() throws InterruptedException {
 		Thread.sleep(1000);
 		
+		Car_Insurance = driver.findElement(By.xpath("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a"));
 		
-		//String xpath = "//*[@id='navigationContainer']/ul/li[2]/div";
-		//String label = "Car insurance";
-		
-	GoCompare_Insurance.Select_Insurance_Type("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a");	
+	    GoCompare_Insurance.Select_Insurance_Type(Car_Insurance);	
 		
 		//driver.findElement(By.xpath("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a")).click();  
 		//this.readOracleDB();
