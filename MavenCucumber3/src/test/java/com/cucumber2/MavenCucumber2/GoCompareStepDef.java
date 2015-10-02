@@ -7,6 +7,7 @@ package com.cucumber2.MavenCucumber2;
 import org.junit.Assert;
 
 
+
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -21,12 +22,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.apache.log4j.*;
 
-
-
-
-
-
-
 import java.io.*;
 
 //import java.util.*;
@@ -37,6 +32,9 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+import com.relevantcodes.extentreports.model.Log;
 
 //import java.sql.*;
 import java.util.logging.Logger;
@@ -79,6 +77,7 @@ public class GoCompareStepDef {
 	String dbName = "JavaDatabase";
 	boolean integratedSecurity = true;
 	static Logger logger;
+	static Logger log;
 	static String change;
 	static String change2;
 	static String change3;
@@ -102,6 +101,8 @@ public class GoCompareStepDef {
 		
 		logger = Logger.getLogger(Test.class.getName());
 		logger.info(System.getProperty("java.library.path"));
+		log = Logger.getLogger(Log.class.getName());
+		log.info("Go Compare is opened");
 		try {
 			Thread.sleep(9000);
 		} catch (InterruptedException e) {
