@@ -8,6 +8,9 @@ import org.junit.Assert;
 
 
 
+
+
+
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -34,7 +37,16 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
+
+
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import com.relevantcodes.extentreports.model.Log;
+
+
+
 
 //import java.sql.*;
 import java.util.logging.Logger;
@@ -84,6 +96,8 @@ public class GoCompareStepDef {
 	static String change4;
 	static String change5;
 	static String change6;
+	static ExtentReports report;
+	static ExtentTest testlogger;
 	
 	
 	
@@ -101,8 +115,10 @@ public class GoCompareStepDef {
 		
 		logger = Logger.getLogger(Test.class.getName());
 		logger.info(System.getProperty("java.library.path"));
-		log = Logger.getLogger(Log.class.getName());
-		log.info("Go Compare is opened");
+		 report = new ExtentReports("H:\\GoCompareTestLogs.html",true);
+		 testlogger = report.startTest("TestGoCompare");
+		testlogger.log(LogStatus.INFO, "Go Compare Browser Opened and Maximised");
+		
 		try {
 			Thread.sleep(9000);
 		} catch (InterruptedException e) {
