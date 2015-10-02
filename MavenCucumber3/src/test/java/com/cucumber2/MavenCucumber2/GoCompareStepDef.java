@@ -99,7 +99,7 @@ public class GoCompareStepDef {
 		driver.get(this.readExcelFile(3, 1));
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		logger.info("Go Compare Window is opened and maximised");
+		
 		logger = Logger.getLogger(Test.class.getName());
 		logger.info(System.getProperty("java.library.path"));
 		try {
@@ -229,7 +229,7 @@ public class GoCompareStepDef {
 	public void closeBrowser(){
 		driver.manage().deleteAllCookies();
 		driver.close();
-		logger.info("Go Compare Window is closed");
+		
 	}
 	
 	@Given("^I'm hovering over the Insurance menu$")
@@ -241,7 +241,7 @@ public class GoCompareStepDef {
     	Insurance_elements = driver.findElement(By.className("menu_1"));
 		Actions action = new Actions(driver);
 		action.moveToElement(Insurance_elements).build().perform();
-		logger.info("Hovering over Insurance Menu");
+		
 		}
 		catch(Exception e){}
 	}
