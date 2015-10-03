@@ -115,7 +115,9 @@ public class GoCompareStepDef {
 		
 		logger = Logger.getLogger(Test.class.getName());
 		logger.info(System.getProperty("java.library.path"));
+		
 		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html",false);
+		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html",null);
 		 testlogger = report.startTest("TestGoCompare");
 		testlogger.log(LogStatus.INFO, "Go Compare Browser Opened and Maximised");
 		
@@ -265,7 +267,7 @@ public class GoCompareStepDef {
 
 	@Given("^the various insurance types are displayed$")
 	public void the_various_insurance_types_are_displayed() {
-		
+	
 		System.out.println("Print Given2");
 	  
 		Insurance_elements = driver.findElement(By.xpath("//*[@id='navigationContainer']/ul/li[2]/div/ul[1]/li[2]/a"));
