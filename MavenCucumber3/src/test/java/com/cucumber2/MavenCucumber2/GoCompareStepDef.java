@@ -102,7 +102,7 @@ public class GoCompareStepDef {
 	
 	
 	//GoCompareStepDef motorbike_Page;
-	static String dataFile = "H:\\GoCompareDataSheet.xlsx"; 
+	static String dataFile = "H:\\Reports\\GoCompareDataSheet.xlsx"; 
 	@Before
 	//@org.junit.Before
 	public void openBrowser(){
