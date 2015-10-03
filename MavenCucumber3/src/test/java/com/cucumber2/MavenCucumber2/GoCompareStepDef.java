@@ -115,7 +115,7 @@ public class GoCompareStepDef {
 		
 		logger = Logger.getLogger(Test.class.getName());
 		logger.info(System.getProperty("java.library.path"));
-		 report = new ExtentReports("H:\\GoCompareTestLogs.html",true);
+		 report = new ExtentReports("H:\\GoCompareTestLogs.html", integratedSecurity);
 		 testlogger = report.startTest("TestGoCompare");
 		testlogger.log(LogStatus.INFO, "Go Compare Browser Opened and Maximised");
 		
