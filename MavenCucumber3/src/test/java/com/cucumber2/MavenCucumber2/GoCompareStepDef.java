@@ -106,6 +106,7 @@ public class GoCompareStepDef {
 	@Before
 	//@org.junit.Before
 	public void openBrowser(){
+		
 		System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 		driver = new ChromeDriver();
 		//driver.get("http://www.gocompare.com");
@@ -116,7 +117,7 @@ public class GoCompareStepDef {
 		logger = Logger.getLogger(Test.class.getName());
 		logger.info(System.getProperty("java.library.path"));
 		
-		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html",false);
+		 
 		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html",null);
 		 testlogger = report.startTest("TestGoCompare");
 		testlogger.log(LogStatus.INFO, "Go Compare Browser Opened and Maximised");
