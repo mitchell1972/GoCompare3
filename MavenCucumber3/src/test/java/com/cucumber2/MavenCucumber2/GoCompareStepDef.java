@@ -102,7 +102,7 @@ public class GoCompareStepDef {
 	
 	
 	//GoCompareStepDef motorbike_Page;
-	static String dataFile = "H:\\Reports\\GoCompareDataSheet.xlsx"; 
+	static String dataFile = "H:\\GoCompareDataSheet.xlsx"; 
 	@Before
 	//@org.junit.Before
 	public void openBrowser(){
@@ -115,7 +115,7 @@ public class GoCompareStepDef {
 		
 		logger = Logger.getLogger(Test.class.getName());
 		logger.info(System.getProperty("java.library.path"));
-		 report = new ExtentReports("H:\\GoCompareTestLogs.html", integratedSecurity);
+		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", integratedSecurity);
 		 testlogger = report.startTest("TestGoCompare");
 		testlogger.log(LogStatus.INFO, "Go Compare Browser Opened and Maximised");
 		
