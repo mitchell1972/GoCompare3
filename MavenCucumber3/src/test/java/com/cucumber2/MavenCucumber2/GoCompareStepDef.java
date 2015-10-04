@@ -102,8 +102,7 @@ public class GoCompareStepDef {
 		logger.info(System.getProperty("java.library.path"));
 		
 	    testlogger.log(LogStatus.INFO, "GoCOmpareOpened");
-	    report.endTest(testlogger);
-	    report.flush();
+	    
 		try {
 			Thread.sleep(9000);
 		} catch (InterruptedException e) {
@@ -231,7 +230,8 @@ public class GoCompareStepDef {
 	public void closeBrowser(){
 		driver.manage().deleteAllCookies();
 		driver.close();
-		
+		report.endTest(testlogger);
+	    report.flush();
 	}
 	
 	@Given("^I'm hovering over the Insurance menu$")
