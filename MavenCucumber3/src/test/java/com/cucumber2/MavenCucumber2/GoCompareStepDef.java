@@ -87,8 +87,8 @@ public class GoCompareStepDef {
 	@Before
 	//@org.junit.Before
 	public void openBrowser(){
-		// report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
-        // testlogger = report.startTest("GoCompareTest");
+		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
+         testlogger = report.startTest("GoCompareTest");
          
 		System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -101,7 +101,8 @@ public class GoCompareStepDef {
 		logger.info(System.getProperty("java.library.path"));
 		
 	    testlogger.log(LogStatus.INFO, "GoCOmpareOpened");
-	    
+	    report.endTest(testlogger);
+	    report.flush();
 		try {
 			Thread.sleep(9000);
 		} catch (InterruptedException e) {
@@ -229,8 +230,7 @@ public class GoCompareStepDef {
 	public void closeBrowser(){
 		driver.manage().deleteAllCookies();
 		driver.close();
-		//report.endTest(testlogger);
-	    //report.flush();
+		
 	}
 	
 	@Given("^I'm hovering over the Insurance menu$")
