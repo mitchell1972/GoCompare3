@@ -230,8 +230,8 @@ public class GoCompareStepDef {
 	public void closeBrowser(){
 		driver.manage().deleteAllCookies();
 		driver.close();
-		report.endTest(testlogger);
-	    report.flush();
+		//report.endTest(testlogger);
+	    //report.flush();
 	}
 	
 	@Given("^I'm hovering over the Insurance menu$")
