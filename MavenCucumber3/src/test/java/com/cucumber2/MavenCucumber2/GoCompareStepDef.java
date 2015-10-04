@@ -104,8 +104,10 @@ public class GoCompareStepDef {
 	    testlogger.log(LogStatus.INFO, "GoCompareOpened");
 	    
 	    System.out.println(driver.getTitle());
-	    //testlogger.log(LogStatus.PASS, );
 	    
+	    if(driver.getTitle().contains("Gocompare.com™")){
+	    testlogger.log(LogStatus.PASS, "Browser Opened");
+	    }
 		try {
 			Thread.sleep(9000);
 		} catch (InterruptedException e) {
