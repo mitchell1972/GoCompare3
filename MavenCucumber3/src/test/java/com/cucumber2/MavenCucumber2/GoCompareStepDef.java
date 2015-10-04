@@ -1,22 +1,13 @@
 package com.cucumber2.MavenCucumber2;
 
 //import java.util.concurrent.TimeUnit;
-
 //import junit.framework.*;
-
 import org.junit.Assert;
-
-
-
-
-
-
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.firefox.FirefoxDriver;
@@ -24,9 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.apache.log4j.*;
-
 import java.io.*;
-
 //import java.util.*;
 //import org.apache.*;
 import org.apache.poi.ss.usermodel.Cell;
@@ -35,25 +24,16 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-
-
-
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.relevantcodes.extentreports.model.Log;
-
-
-
-
+import com.opera.core.systems.scope.services.*;
 //import java.sql.*;
 import java.util.logging.Logger;
-
 import junit.framework.Test;
-
 //import oracle.jdbc.pool.OracleDataSource;
+
 
 
 
@@ -96,7 +76,7 @@ public class GoCompareStepDef {
 	static String change4;
 	static String change5;
 	static String change6;
-	static ExtentReports report;
+    static ExtentReports report;
 	static ExtentTest testlogger;
 	
 	
@@ -117,11 +97,9 @@ public class GoCompareStepDef {
 		logger = Logger.getLogger(Test.class.getName());
 		logger.info(System.getProperty("java.library.path"));
 		
-		 
-		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html",true);
-		 testlogger = report.startTest("TestGoCompare");
-		testlogger.log(LogStatus.INFO, "Go Compare Browser Opened and Maximised");
-		
+		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true); 
+		testlogger = report.startTest("Verify GoCompare");
+	
 		try {
 			Thread.sleep(9000);
 		} catch (InterruptedException e) {
@@ -261,7 +239,8 @@ public class GoCompareStepDef {
     	Insurance_elements = driver.findElement(By.className("menu_1"));
 		Actions action = new Actions(driver);
 		action.moveToElement(Insurance_elements).build().perform();
-		
+		testlogger.log(LogStatus.INFO, "Hovering");
+		testlogger.addScreenCapture("H:\\Reports\\GoCompareTestLogs.html");
 		}
 		catch(Exception e){}
 	}
