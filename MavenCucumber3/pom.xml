@@ -109,15 +109,5 @@
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0.2.0</version>
 </dependency>
- <dependency>
- 	<groupId>com.relevantcodes</groupId>
- 	<artifactId>extentreports</artifactId>
- 	<version>2.01</version>
- </dependency>
- <dependency>
- 	<groupId>ant</groupId>
- 	<artifactId>ant-apache-log4j</artifactId>
- 	<version>1.6.5</version>
- </dependency>
   </dependencies>
 </project>

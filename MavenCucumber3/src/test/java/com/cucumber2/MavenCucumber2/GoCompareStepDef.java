@@ -24,10 +24,13 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.relevantcodes.extentreports.model.Log;
+import com.relevantcodes.extentreports.*;
+
 import com.opera.core.systems.scope.services.*;
 //import java.sql.*;
 import java.util.logging.Logger;
@@ -79,14 +82,15 @@ public class GoCompareStepDef {
     static ExtentReports report;
 	static ExtentTest testlogger;
 	
-	
-	
+   
 	//GoCompareStepDef motorbike_Page;
 	static String dataFile = "H:\\GoCompareDataSheet.xlsx"; 
 	@Before
 	//@org.junit.Before
 	public void openBrowser(){
-		
+		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
+         testlogger = report.startTest("GoCompareTest");
+         
 		System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 		driver = new ChromeDriver();
 		//driver.get("http://www.gocompare.com");
@@ -99,7 +103,9 @@ public class GoCompareStepDef {
 		
 		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true); 
 		testlogger = report.startTest("Verify GoCompare");
-	
+	    testlogger.log(LogStatus.INFO, "GoCOmpareOpened");
+	    report.endTest(testlogger);
+	    report.flush();
 		try {
 			Thread.sleep(9000);
 		} catch (InterruptedException e) {
