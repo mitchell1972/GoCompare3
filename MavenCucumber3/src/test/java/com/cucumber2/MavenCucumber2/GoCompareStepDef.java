@@ -101,8 +101,6 @@ public class GoCompareStepDef {
 		logger = Logger.getLogger(Test.class.getName());
 		logger.info(System.getProperty("java.library.path"));
 		
-		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true); 
-		testlogger = report.startTest("Verify GoCompare");
 	    testlogger.log(LogStatus.INFO, "GoCOmpareOpened");
 	    report.endTest(testlogger);
 	    report.flush();
