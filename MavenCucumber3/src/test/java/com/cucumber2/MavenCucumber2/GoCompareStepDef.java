@@ -87,6 +87,7 @@ public class GoCompareStepDef {
 	@Before
 	//@org.junit.Before
 	public void openBrowser(){
+		WebElement goComparePage;
 		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
          testlogger = report.startTest("GoCompare_Browser_Opened");
          
@@ -101,8 +102,10 @@ public class GoCompareStepDef {
 		logger.info(System.getProperty("java.library.path"));
 		
 	    testlogger.log(LogStatus.INFO, "GoCompareOpened");
-	    //report.endTest(testlogger);
-	    //report.flush();
+	    
+	    System.out.println(driver.getTitle());
+	    //testlogger.log(LogStatus.PASS, );
+	    
 		try {
 			Thread.sleep(9000);
 		} catch (InterruptedException e) {
