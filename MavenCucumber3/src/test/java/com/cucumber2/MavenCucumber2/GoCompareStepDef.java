@@ -28,8 +28,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import com.relevantcodes.extentreports.model.Log;
-import com.relevantcodes.extentreports.*;
+
 
 import com.opera.core.systems.scope.services.*;
 //import java.sql.*;
