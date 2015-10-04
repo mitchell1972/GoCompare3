@@ -88,8 +88,8 @@ public class GoCompareStepDef {
 	@Before
 	//@org.junit.Before
 	public void openBrowser(){
-		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
-         testlogger = report.startTest("GoCompareTest");
+		// report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
+        // testlogger = report.startTest("GoCompareTest");
          
 		System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 		driver = new ChromeDriver();
