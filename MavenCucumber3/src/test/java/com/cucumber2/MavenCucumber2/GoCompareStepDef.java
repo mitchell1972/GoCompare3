@@ -110,11 +110,13 @@ public class GoCompareStepDef {
 	    else 
 	    	testlogger.log(LogStatus.FAIL, "Browser_Failed_To_Open");
 		try {
-			Thread.sleep(9000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		report.endTest(testlogger);
+	    report.flush();
 		
 		//motorbike_Page = new GoCompareStepDef();
 	}
@@ -236,15 +238,14 @@ public class GoCompareStepDef {
 	public void closeBrowser(){
 		driver.manage().deleteAllCookies();
 		driver.close();
-		report.endTest(testlogger);
-	    report.flush();
+		
 	}
 	
 	@Given("^I'm hovering over the Insurance menu$")
 	public void i_m_hovering_over_the_Insurance_menu(){
 		try
 		{
-		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", false);
+		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
 	    testlogger = report.startTest("Hovering over insurance menu");
 		System.out.println("Print Given");
 		Thread.sleep(1000);
@@ -252,7 +253,9 @@ public class GoCompareStepDef {
 		Actions action = new Actions(driver);
 		action.moveToElement(Insurance_elements).build().perform();
 		testlogger.log(LogStatus.INFO, "Hovering");
-		testlogger.log(LogStatus.INFO, testlogger.addScreencast("H:\\Reports"));
+		testlogger.log(LogStatus.INFO, testlogger.addScreenCapture("H:\\Reports"));
+		report.endTest(testlogger);
+	    report.flush();
 		}
 		catch(Exception e){}
 	}
