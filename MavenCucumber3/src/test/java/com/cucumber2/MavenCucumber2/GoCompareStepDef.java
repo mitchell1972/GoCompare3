@@ -87,8 +87,8 @@ public class GoCompareStepDef {
 	@Before
 	//@org.junit.Before
 	public void openBrowser(){
-		WebElement goComparePage;
-		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
+	
+		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", false);
          testlogger = report.startTest("GoCompare_Browser_Opened");
          
 		System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
@@ -244,7 +244,7 @@ public class GoCompareStepDef {
 	public void i_m_hovering_over_the_Insurance_menu(){
 		try
 		{
-		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
+		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", false);
 	    testlogger = report.startTest("Hovering over insurance menu");
 		System.out.println("Print Given");
 		Thread.sleep(1000);
