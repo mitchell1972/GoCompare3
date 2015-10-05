@@ -238,6 +238,7 @@ public class GoCompareStepDef {
 	public void closeBrowser(){
 		driver.manage().deleteAllCookies();
 		driver.close();
+		driver.get("H:\\Reports\\GoCompareTestLogs.html");
 		
 	}
 	
