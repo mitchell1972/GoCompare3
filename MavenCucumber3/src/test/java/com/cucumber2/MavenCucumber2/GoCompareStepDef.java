@@ -253,7 +253,7 @@ public class GoCompareStepDef {
 		Actions action = new Actions(driver);
 		action.moveToElement(Insurance_elements).build().perform();
 		testlogger.log(LogStatus.INFO, "Hovering");
-		testlogger.log(LogStatus.INFO, testlogger.addScreenCapture("H:\\Reports\\GoCompareTestLogs.html"));
+		testlogger.log(LogStatus.INFO, testlogger.addScreenCapture("H:\\Reports"));
 		report.endTest(testlogger);
 	    report.flush();
 		}
