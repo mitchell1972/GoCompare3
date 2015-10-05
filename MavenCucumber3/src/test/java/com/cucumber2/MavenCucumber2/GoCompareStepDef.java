@@ -102,7 +102,6 @@ public class GoCompareStepDef {
 		logger.info(System.getProperty("java.library.path"));
 		
 	    testlogger.log(LogStatus.INFO, "GoCompareOpened");
-	    
 	    System.out.println(driver.getTitle());
 	    
 	    if(driver.getTitle().contains("Gocompare.com™")){
@@ -245,13 +244,15 @@ public class GoCompareStepDef {
 	public void i_m_hovering_over_the_Insurance_menu(){
 		try
 		{
+		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
+	    testlogger = report.startTest("Hovering over insurance menu");
 		System.out.println("Print Given");
 		Thread.sleep(1000);
     	Insurance_elements = driver.findElement(By.className("menu_1"));
 		Actions action = new Actions(driver);
 		action.moveToElement(Insurance_elements).build().perform();
 		testlogger.log(LogStatus.INFO, "Hovering");
-		testlogger.addScreenCapture("H:\\Reports\\GoCompareTestLogs.html");
+		testlogger.addScreenCapture("H:\\Reports");
 		}
 		catch(Exception e){}
 	}
