@@ -7,4 +7,4 @@ Scenario: Select Get Quotes Button
 	When I enter the correct details 
 	And click on the Continue button 
 	Then the Personal details page for the name entered is displayed 
-	Then close browser
+	

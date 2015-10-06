@@ -6,4 +6,3 @@ Scenario: Select Motorbike Insurance
 	And the various insurance types are displayed 
 	When I click on Motorbike Insurance 
 	Then the Motorbike insurance page is displayed 
-	Then close browser

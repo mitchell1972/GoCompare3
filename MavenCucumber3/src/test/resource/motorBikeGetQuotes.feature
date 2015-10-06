@@ -6,4 +6,4 @@ Scenario: Select Get Quotes Button
 	And the Get Quotes button is visible 
 	When I click on the Get Quotes Button 
 	Then the start a new quote page is displayed 
-	Then close browser
+

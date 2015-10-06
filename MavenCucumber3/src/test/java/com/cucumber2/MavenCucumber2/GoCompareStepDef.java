@@ -238,7 +238,8 @@ public class GoCompareStepDef {
 	//@org.junit.After 
 	
 	public void closeBrowser(){
-	driver2.get("H:\\Reports\\GoCompareTestLogs.html");
+		driver.manage().deleteAllCookies();
+		driver.close();
 		
 		
 	}
@@ -494,14 +495,5 @@ public class GoCompareStepDef {
 	   }
 	
 	}
-
-	@Then("^close browser$")
-	public void close_browser() throws Throwable {
-	   driver.manage().deleteAllCookies();
-	   driver.close();
-	   
-	}
-	
-	
 
 }

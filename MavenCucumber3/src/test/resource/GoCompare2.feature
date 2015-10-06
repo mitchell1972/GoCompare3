@@ -6,4 +6,4 @@ Scenario: Select Car Insurance
 	And the various insurance types are displayed 
 	When I click on Car Insurance 
 	Then the Car insurance page is displayed 
-	Then close browser 
+ 
