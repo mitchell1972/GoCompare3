@@ -248,7 +248,7 @@ public class GoCompareStepDef {
 	public void i_m_hovering_over_the_Insurance_menu(){
 		try
 		{
-		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
+		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", false);
 	    testlogger = report.startTest("Hovering over insurance menu");
 		System.out.println("Print Given");
 		Thread.sleep(1000);
