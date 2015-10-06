@@ -7,3 +7,4 @@ Scenario: Select Get Quotes Button
 	When I click on the Get Quotes Button 
 	Then the start a new quote page is displayed 
 	Then close browser
+	Then open extent report

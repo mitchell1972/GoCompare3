@@ -89,11 +89,12 @@ public class GoCompareStepDef {
 	//@org.junit.Before
 	public void openBrowser(){
 	
-		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", false);
+		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
          testlogger = report.startTest("GoCompare_Browser_Opened");
          
 		System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 		driver = new ChromeDriver();
+		
 		//driver.get("http://www.gocompare.com");
 		driver.get(this.readExcelFile(3, 1));
 		driver.manage().deleteAllCookies();
@@ -239,7 +240,6 @@ public class GoCompareStepDef {
 	public void closeBrowser(){
 		driver.manage().deleteAllCookies();
 		
-		driver2.get("H:\\Reports\\GoCompareTestLogs.html");
 		
 	}
 	
@@ -499,6 +499,12 @@ public class GoCompareStepDef {
 	public void close_browser() throws Throwable {
 	   driver.close();
 	   
+	}
+	
+	@Then("^open extent report$")
+	public void open_extent_report() throws Throwable {
+		driver2 = new ChromeDriver();
+		driver2.get("H:\\Reports\\GoCompareTestLogs.html");
 	}
 
 }
