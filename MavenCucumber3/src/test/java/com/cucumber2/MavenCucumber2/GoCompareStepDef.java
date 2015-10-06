@@ -43,6 +43,7 @@ import junit.framework.Test;
 public class GoCompareStepDef {
 	
 	static WebDriver driver;
+	static WebDriver driver2;
 	static WebElement Insurance_elements;
 	static WebElement Motorbike_Insurance_element;
 	static WebElement Car_Insurance_Page;
@@ -237,8 +238,8 @@ public class GoCompareStepDef {
 	
 	public void closeBrowser(){
 		driver.manage().deleteAllCookies();
-		driver.close();
-		driver.get("H:\\Reports\\GoCompareTestLogs.html");
+		
+		driver2.get("H:\\Reports\\GoCompareTestLogs.html");
 		
 	}
 	
@@ -494,6 +495,10 @@ public class GoCompareStepDef {
 	
 	}
 
-
+	@Then("^close browser$")
+	public void close_browser() throws Throwable {
+	   driver.close();
+	   
+	}
 
 }
