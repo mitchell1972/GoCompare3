@@ -248,7 +248,7 @@ public class GoCompareStepDef {
 	public void i_m_hovering_over_the_Insurance_menu(){
 		try
 		{
-		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", false);
+		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", true);
 	    testlogger = report.startTest("Hovering over insurance menu");
 		System.out.println("Print Given");
 		Thread.sleep(1000);
@@ -256,7 +256,7 @@ public class GoCompareStepDef {
 		Actions action = new Actions(driver);
 		action.moveToElement(Insurance_elements).build().perform();
 		testlogger.log(LogStatus.INFO, "Hovering");
-		testlogger.log(LogStatus.INFO, "Screen shot" + testlogger.addScreenCapture("H:\\Reports\\GoCompareTestLogs.html\\imagge.jpg"));
+		testlogger.log(LogStatus.INFO, "Screen shot" + testlogger.addScreenCapture("H:\\Reports\\GoCompareTestLogs.html"));
 		report.endTest(testlogger);
 	    report.flush();
 		}
