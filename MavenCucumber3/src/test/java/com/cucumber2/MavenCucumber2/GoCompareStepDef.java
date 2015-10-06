@@ -501,10 +501,6 @@ public class GoCompareStepDef {
 	   
 	}
 	
-	@Then("^open extent report$")
-	public void open_extent_report() throws Throwable {
-		driver2 = new ChromeDriver();
-		driver2.get("H:\\Reports\\GoCompareTestLogs.html");
-	}
+	
 
 }
