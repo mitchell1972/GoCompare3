@@ -84,6 +84,7 @@ public class GoCompareStepDef {
 	String report_Path = "H:\\Reports\\GoCompareTestLogs_06_10_2015.html";
 	String screen_shot = "H:\\Reports\\openbrowser.jpg";
 	String screen_shot2 = "H:\\Reports\\hover.jpg";
+	int count;
 	
    
 	//GoCompareStepDef motorbike_Page;
@@ -91,7 +92,7 @@ public class GoCompareStepDef {
 	@Before
 	//@org.junit.Before
 	public void openBrowser(){
-	
+	      count = count + 1;
 		 report = new ExtentReports(report_Path, false);
          testlogger = report.startTest("GoCompare_Browser_Opened");
          
@@ -112,7 +113,7 @@ public class GoCompareStepDef {
 	    GoCompare_Insurance.getscreenshot(screen_shot, driver);
 	    if(driver.getTitle().contains("Gocompare.com™")){
 	    testlogger.log(LogStatus.PASS, "Browser Opened");
-	    testlogger.log(LogStatus.INFO, "Open Browser" + testlogger.addScreenCapture(screen_shot));
+	    testlogger.log(LogStatus.INFO, "Open Browser" + testlogger.addScreenCapture(screen_shot + count));
 	    }
 	    else 
 	    	testlogger.log(LogStatus.FAIL, "Browser_Failed_To_Open");
@@ -261,7 +262,7 @@ public class GoCompareStepDef {
 		testlogger.log(LogStatus.INFO, "Hovering");
 		
 		GoCompare_Insurance.getscreenshot(screen_shot2, driver);
-		testlogger.log(LogStatus.INFO, "Hovering Screen Shot" + testlogger.addScreenCapture(screen_shot2));
+		testlogger.log(LogStatus.INFO, "Hovering Screen Shot" + testlogger.addScreenCapture(screen_shot2 + count));
 		report.endTest(testlogger);
 	    report.flush();
 		}
