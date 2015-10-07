@@ -109,6 +109,7 @@ public class GoCompareStepDef {
 	    testlogger.log(LogStatus.INFO, "GoCompareOpened");
 	    System.out.println(driver.getTitle());
 	    
+	    GoCompare_Insurance.getscreenshot(screen_shot, driver);
 	    if(driver.getTitle().contains("Gocompare.com™")){
 	    testlogger.log(LogStatus.PASS, "Browser Opened");
 	    testlogger.log(LogStatus.INFO, "Open Browser" + testlogger.addScreenCapture(screen_shot));
@@ -258,7 +259,8 @@ public class GoCompareStepDef {
 		Actions action = new Actions(driver);
 		action.moveToElement(Insurance_elements).build().perform();
 		testlogger.log(LogStatus.INFO, "Hovering");
-		GoCompare_Insurance.getscreenshot("H:\\Reports\\screenshot.png", driver);
+		
+		GoCompare_Insurance.getscreenshot(screen_shot2, driver);
 		testlogger.log(LogStatus.INFO, "Hovering Screen Shot" + testlogger.addScreenCapture(screen_shot2));
 		report.endTest(testlogger);
 	    report.flush();
