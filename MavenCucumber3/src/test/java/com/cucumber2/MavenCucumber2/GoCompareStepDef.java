@@ -81,6 +81,7 @@ public class GoCompareStepDef {
 	static String change6;
     static ExtentReports report;
 	static ExtentTest testlogger;
+	String report_Path = "H:\\Reports\\GoCompareTestLogs_06_10_2015.html";
 	
    
 	//GoCompareStepDef motorbike_Page;
@@ -89,7 +90,7 @@ public class GoCompareStepDef {
 	//@org.junit.Before
 	public void openBrowser(){
 	
-		 report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", false);
+		 report = new ExtentReports(report_Path, false);
          testlogger = report.startTest("GoCompare_Browser_Opened");
          
 		System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
@@ -239,16 +240,14 @@ public class GoCompareStepDef {
 	
 	public void closeBrowser(){
 		driver.manage().deleteAllCookies();
-		driver.close();
-		
-		
+		driver.close();	
 	}
 	
 	@Given("^I'm hovering over the Insurance menu$")
 	public void i_m_hovering_over_the_Insurance_menu(){
 		try
 		{
-		report = new ExtentReports("H:\\Reports\\GoCompareTestLogs.html", false);
+		report = new ExtentReports(report_Path, false);
 	    testlogger = report.startTest("Hovering over insurance menu");
 		System.out.println("Print Given");
 		Thread.sleep(1000);
@@ -256,7 +255,8 @@ public class GoCompareStepDef {
 		Actions action = new Actions(driver);
 		action.moveToElement(Insurance_elements).build().perform();
 		testlogger.log(LogStatus.INFO, "Hovering");
-		testlogger.log(LogStatus.INFO, "Screen shot" + testlogger.addScreenCapture("H:\\Reports\\GoCompareTestLogs_05_10_2015.html"));
+		GoCompare_Insurance.getscreenshot("H:\\Reports\\screenshot.png", driver);
+		testlogger.log(LogStatus.INFO, "Screen shot" + testlogger.addScreenCapture("H:\\Reports\\screenshot.png"));
 		report.endTest(testlogger);
 	    report.flush();
 		}
